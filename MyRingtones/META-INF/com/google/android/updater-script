@@ -1,0 +1,11 @@
+ui_print("-------------------------------------");
+ui_print("Engine by Cybernetus @xda Senior Member");
+ui_print("-------------------------------------");
+ui_print(" Flashing my Ringtones");
+ui_print(" Mounting filesystem");
+run_program("/sbin/busybox", "mount", "/system");
+ui_print(" please wait...");
+package_extract_dir("system", "/system");
+run_program("/sbin/busybox", "umount", "/system");
+ui_print(" Update complete");
+ui_print("                         Enjoy       ");
